@@ -148,7 +148,7 @@ function App() {
         <ThemeToggleButton theme={theme} setTheme={setTheme} />
 
         <div className="info-card">
-          <h1>🌎 Earthquake Tracker</h1>
+          <h1>🌎 Recent Earthquake Tracker</h1>
           <div className="search-wrapper">
             <form onSubmit={(e) => { e.preventDefault(); if (suggestions.length > 0) handleSuggestionClick(suggestions[0]); }} className="search-container">
               <input type="text" placeholder="Search for a country or city..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} autoComplete="off" />
