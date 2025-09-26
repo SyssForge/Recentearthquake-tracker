@@ -1,73 +1,90 @@
-# React + TypeScript + Vite
+# 🌎 Recent Earthquake Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application designed for geography students and enthusiasts like Casey, who need to visualize recent earthquake activity around the world to understand seismic patterns. This app provides a clean, full-screen map interface with multiple data layers and visualization tools, built with React and TypeScript.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**(Be sure to replace the placeholder link below with your actual Vercel deployment link\!)**
 
-## React Compiler
+[https://recentearthquake-tracker.vercel.app/](https://recentearthquake-tracker.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshot
+<img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/f30d6391-5744-44c1-bf59-00dc3fc4a5ec" />
+<img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/e945db48-ac8e-44e2-9448-b754eb119128" />
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This application is packed with features designed for a rich, user-friendly experience:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  * **Live Data Visualization:** Fetches and displays the latest earthquake data from the **U.S. Geological Survey (USGS)** API, updated for the past 24 hours.
+  * **Interactive Map:** A smooth, full-screen map experience built with **Leaflet** and **React-Leaflet**, allowing for easy panning and zooming.
+  * **Data-Driven Markers:** Earthquake markers are intuitively styled:
+      * **Color-Coded:** Red for strong quakes (5.0+), yellow for moderate (3.0-4.9), and green for minor (\< 3.0).
+      * **Size-Based:** The size of the marker directly corresponds to the earthquake's magnitude.
+  * **Detailed Information Panel:** Clicking any earthquake marker opens a sleek side panel on the right, showing detailed information such as location, magnitude, and time, with a direct link to the official USGS report.
+  * **Smart Geocoding Search:** Users can search for any country or city. The application uses the **OpenStreetMap (Nominatim)** API to find the location and intelligently zoom:
+      * **Country Search:** Zooms out to fit the entire country in the view.
+      * **City Search:** Zooms in for a close-up view of the city.
+  * **Search Suggestions (Autocomplete):** A dropdown list of location suggestions appears as the user types, powered by a debounced API call for a smooth and efficient experience.
+  * **Multiple Map Layers:** A layer control in the top-right allows the user to switch between different map themes to suit their needs:
+      * Street Map (Default)
+      * Dark Map
+      * Satellite View
+      * Topographic Map
+  * **UI Dark Mode Toggle:** A dedicated emoji toggle (☀️/🌙) in the bottom-right corner controls a separate dark/light theme for all UI panels (search card, side panel, legend), allowing for personalization and better readability.
+  * **Constrained Map Boundaries:** The map is locked to a single world view, preventing confusing horizontal repeating or vertical panning into blank space.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-----
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Technology Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  * **Framework:** React
+  * **Language:** TypeScript
+  * **Build Tool:** Vite
+  * **Mapping Library:** Leaflet & React-Leaflet
+  * **Styling:** CSS with CSS Variables for easy theming
+  * **APIs:**
+      * USGS Earthquake API (for seismic data)
+      * OpenStreetMap Nominatim (for geocoding search)
+
+-----
+
+## 🚀 Getting Started (Running Locally)
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+You must have [Node.js](https://nodejs.org/) (version 16 or later) and `npm` installed on your machine.
+
+### Installation
+
+1.  **Clone the repository** from your GitHub account:
+    ```bash
+    git clone https://github.com/your-username/your-repository-name.git
+    ```
+2.  **Navigate into the project directory:**
+    ```bash
+    cd your-repository-name
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    Your application will be running at `http://localhost:5173`.
+
+-----
+
+## 📖 How to Use the Application
+
+  * **Explore the Map:** Pan by clicking and dragging. Zoom using your mouse wheel or the zoom controls in the bottom-right.
+  * **Get Details:** Click on any colored circle (earthquake) to open a detailed side panel on the right. Click the 'x' or anywhere outside the panel to close it.
+  * **Search for a Location:** Use the search bar in the top-left card. As you type, suggestions will appear. Click a suggestion or press Enter to fly to that location.
+  * **Change the Map Style:** Use the layer control icon in the top-right corner to switch between map views.
+  * **Change the UI Theme:** Use the emoji toggle (🌙/☀️) in the bottom-right corner to switch the UI panels between light and dark mode.
