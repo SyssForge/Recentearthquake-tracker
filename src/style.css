@@ -214,8 +214,8 @@ body.dark-theme {
 /* Legend Styles */
 .legend {
   position: absolute;
-  bottom: 30px;
-  left: 15px;
+  bottom: 5px;
+  left: 5px;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(5px);
   padding: 10px 15px;
@@ -510,7 +510,7 @@ body.dark-theme {
 .app-credit {
   position: absolute;
   bottom: 5px; /* Adjust as needed, slightly above Leaflet's built-in attribution */
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%); /* Center horizontally */
   z-index: 1000; /* Ensure it's above the map tiles */
   padding: 0px 8px;
@@ -536,4 +536,5 @@ body.dark-theme {
 
 .dark-theme .app-credit a {
   color: #79a6fe; /* A lighter blue for contrast */
+
 }
