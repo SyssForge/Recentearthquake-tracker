@@ -24,9 +24,7 @@ This application is packed with features designed for a rich, user-friendly expe
       * **Color-Coded:** Red for strong quakes (5.0+), yellow for moderate (3.0-4.9), and green for minor (\< 3.0).
       * **Size-Based:** The size of the marker directly corresponds to the earthquake's magnitude.
   * **Detailed Information Panel:** Clicking any earthquake marker opens a sleek side panel on the right, showing detailed information such as location, magnitude, and time, with a direct link to the official USGS report.
-  * **Smart Geocoding Search:** Users can search for any country or city. The application uses the **OpenStreetMap (Nominatim)** API to find the location and intelligently zoom:
-      * **Country Search:** Zooms out to fit the entire country in the view.
-      * **City Search:** Zooms in for a close-up view of the city.
+  * **Smart Geocoding Search:** Users can search for any country or city. The application uses the **OpenStreetMap (Nominatim)** 
   * **Search Suggestions (Autocomplete):** A dropdown list of location suggestions appears as the user types, powered by a debounced API call for a smooth and efficient experience.
   * **Multiple Map Layers:** A layer control in the top-right allows the user to switch between different map themes to suit their needs:
       * Street Map (Default)
