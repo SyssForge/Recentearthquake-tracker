@@ -13,6 +13,10 @@ An interactive web application designed for geography students and enthusiasts l
 <img width="1919" height="965" alt="image" src="https://github.com/user-attachments/assets/f9c89a92-5afe-4746-9314-be5819df0a8d" />
 
 
+*  **Mobile Version**
+<img width="545" height="860" alt="image" src="https://github.com/user-attachments/assets/074a3ffa-d315-4c35-a640-85795b12072d" />
+
+
 
 
 
