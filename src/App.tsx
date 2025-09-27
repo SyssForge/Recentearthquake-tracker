@@ -90,7 +90,7 @@ const CustomControls = ({ theme, setTheme }: { theme: 'light' | 'dark', setTheme
    return (
      <div className="search-panel">
        <button className="close-btn" onClick={() => setIsOpen(false)}>&times;</button>
-       <h2>🌎 Recent Earthquake Activity</h2>
+       <h2>🌎Earthquake Tracker</h2>
        <div className="search-wrapper">
          <form onSubmit={handleSearch} className="search-container">
            <input type="text" placeholder="Search for a country or city..." value={props.searchQuery} onChange={(e) => props.setSearchQuery(e.target.value)} autoComplete="off" autoFocus />
@@ -215,9 +215,9 @@ const CustomControls = ({ theme, setTheme }: { theme: 'light' | 'dark', setTheme
          maxBoundsViscosity={1.0}
        >
          <LayersControl position="topright">
-           <LayersControl.BaseLayer checked name="Street Map">
-             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' />
-           </LayersControl.BaseLayer>
+           <LayersControl.BaseLayer checked name="Street Map"> 
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' /> 
+          </LayersControl.BaseLayer>
            <LayersControl.BaseLayer name="Dark Map">
              <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>' />
            </LayersControl.BaseLayer>
@@ -248,6 +248,9 @@ const CustomControls = ({ theme, setTheme }: { theme: 'light' | 'dark', setTheme
            );
          })}
        </MapContainer>
+       <footer className="app-credit">
+        Developed by <a href="https://github.com/SyssForge" target="_blank" rel="noopener noreferrer">Harsha Yelchuri</a>
+      </footer>
      </>
    );
  } 

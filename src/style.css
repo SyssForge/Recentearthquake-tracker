@@ -506,3 +506,34 @@ body.dark-theme {
   /* ADDED THIS RULE */
   color: var(--dark-text-primary);
 }
+/* Application-level Credit Footer */
+.app-credit {
+  position: absolute;
+  bottom: 5px; /* Adjust as needed, slightly above Leaflet's built-in attribution */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000; /* Ensure it's above the map tiles */
+  padding: 0px 8px;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+  color: var(--light-text-secondary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.app-credit a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Dark Theme Override */
+.dark-theme .app-credit {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--dark-text-secondary);
+}
+
+.dark-theme .app-credit a {
+  color: #79a6fe; /* A lighter blue for contrast */
+}
