@@ -3,14 +3,17 @@
 An interactive web application designed for geography students and enthusiasts like Casey, who need to visualize recent earthquake activity around the world to understand seismic patterns. This app provides a clean, full-screen map interface with multiple data layers and visualization tools, built with React and TypeScript.
 
 ## Live Demo
-
-**(Be sure to replace the placeholder link below with your actual Vercel deployment link\!)**
-
 [https://recentearthquake-tracker.vercel.app/](https://recentearthquake-tracker.vercel.app/)
 
 ## Screenshot
-<img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/f30d6391-5744-44c1-bf59-00dc3fc4a5ec" />
-<img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/e945db48-ac8e-44e2-9448-b754eb119128" />
+<img width="1919" height="970" alt="image" src="https://github.com/user-attachments/assets/f3c707b5-544c-43fa-95b7-62685a765ee4" />
+
+<img width="1919" height="968" alt="image" src="https://github.com/user-attachments/assets/ea8a77c9-5372-4817-bc1c-1435041949f1" />
+
+<img width="1919" height="965" alt="image" src="https://github.com/user-attachments/assets/f9c89a92-5afe-4746-9314-be5819df0a8d" />
+
+
+
 
 
 
